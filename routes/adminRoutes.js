@@ -42,7 +42,7 @@ router.post("/loginuser/:email",async(req,res)=>{
         }
 
     
-        const token =await JWT.sign({_id:user._id},process.env.Sec_key,{expiresIn:"7d"})
+        const token =await JWT.sign({_id:user._id},process.env.SEC_KEY,{expiresIn:"7d"})
         
         res.status(200).send({
             success:true,
