@@ -7,7 +7,7 @@ const { hashpassword } = require('../helper/passwordhelper');
 const router=express.Router()
 
 
-router.get('/users',requiresignin,isAdmin,async(req,res)=>{
+router.get('/users',async(req,res)=>{
     try {
         roles=0;
         const user=await usermodel.find({role:roles})
